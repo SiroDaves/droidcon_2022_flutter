@@ -1,6 +1,6 @@
 {
-    "name": "droidcon_2022_flutter",
-    "short_name": "droidcon_2022_flutter",
+    "name": "droidcon_app",
+    "short_name": "droidcon_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
