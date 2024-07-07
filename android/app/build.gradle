@@ -2,7 +2,7 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
-    id "com.google.gms.google-services"
+    //id "com.google.gms.google-services"
     id "com.google.firebase.crashlytics"
     id "com.google.firebase.firebase-perf"
 }
@@ -51,25 +51,17 @@ android {
 
     defaultConfig {
         applicationId "ke.co.droidcon22flutter.droidcon_2022_flutter"
-        minSdkVersion 19
-        targetSdkVersion flutter.targetSdkVersion
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        minSdkVersion 21
+        targetSdkVersion 34
+        compileSdkVersion 34
         multiDexEnabled true
-    }
-
-    signingConfigs {
-        release {
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
-            storeFile file(keystoreProperties['storeFile'])
-            storePassword keystoreProperties['storePassword']
-        }
+        versionCode 1
+        versionName "1.0.0"
     }
 
     buildTypes {
         release {
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
         }
     }
 }
